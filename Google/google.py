@@ -44,7 +44,7 @@ def signin():
 
 @app.route("/reroute", methods=["GET", "POST"])
 def flash_to_google():
-    flash(f"An error accured when trying to send account information to server, reloading page!", "invalid")
+    flash(f"An error occurred when trying to send account information to server, reloading page!", "invalid")
     form = FormLogin()
     return render_template("google-signin.html", title="Sign In", form=form, redirect = True)
 
